@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvConnectingMessage"/>
+
+    <!-- Message indicating connecting to a doctor -->
+    <TextView
+        android:id="@+id/tvConnectingMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="We're trying to connect to a doctor..."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Buttons layout -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvConnectingMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Button to use the camera -->
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use Camera"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button to start voice recording -->
+        <Button
+            android:id="@+id/btnVoiceRecording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Voice Recording"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button for text input -->
+        <Button
+            android:id="@+id/btnTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Text"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
